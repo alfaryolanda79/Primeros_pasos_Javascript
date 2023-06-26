@@ -112,13 +112,13 @@ document.write(coche.precioCoche + "<br>");
   console.log(numeros);
   console.table(numeros);
   //Crear una función que imprima en consola todos los números del array (ciclo for)
-  // function imprimirNumeros(numeros) {
-  //   for (let i = 0; i < numeros.length; i++) {
-  //     console.log(numeros[i]);
-  //   }
-  // }
+  function imprimirNumeros(numeros) {
+    for (let i = 0; i < numeros.length; i++) {
+      console.log(numeros[i]);
+    }
+  }
   
-  //  imprimirNumeros(numeros);
+   imprimirNumeros(numeros);
 
   function imprimirNumeros(array){
     for (let i = 0; i < array.length; i++){
@@ -141,22 +141,78 @@ document.write(coche.precioCoche + "<br>");
 
    añadirNumero(numeros)
 
-  //  function añadirNumero(array, numero) {
-  //   array.push(numero);
-  //  }
+   function añadirNumero(array, numero) {
+    array.push(numero);
+   }
 
-  //  añadirNumero(numeros,43);
-  //  console.log(numeros);
+   añadirNumero(numeros,43);
+   console.log(numeros);
+   //añadir número utilizando length:
+
+   let frutas = ['plátano', 'ciruela', 'manzana'];
+   document.getElementById("demo").innerHTML = frutas;
+   frutas[frutas.length] = 'limón';
+   document.getElementById("demo2").innerHTML = frutas;
 
 
 
-   //numeros.push(11); //lo añade a la última posición
-   //console.log(numeros);
-   //numeros.unshift(0); //lo añade a la primera posición
-   //console.log(numeros);
+   numeros.push(11); //lo añade a la última posición
+   console.log(numeros);
+   numeros.unshift(0); //lo añade a la primera posición
+   console.log(numeros);
   //Crear una función que elimine los números pares de ese array
-    //let newNumeros = numeros.filter(element => element % 2 !== 0); //Crea un nuevo array sin los números pares
-    //console.log(newNumeros); // [1, 3, 5...]
+    let newNumeros = numeros.filter(element => element % 2 !== 0); //Crea un nuevo array sin los números pares
+    console.log(newNumeros); // [1, 3, 5...]
+
+    // Ordenar de forma ascendente y obtener el índice:
+    const points = [40, 100, 1, 5, 25, 10];
+    points.sort(function(a, b){return a - b});
+    document.getElementById("demo3").innerHTML = points;
+
+    //lo mismo pero ordenado de forma descendente:
+    const pointes = [40, 100, 1, 5, 25, 10];
+    pointes.sort(function(a, b){return b - a});
+    document.getElementById("demo4").innerHTML = pointes;
+
+    //Crear una función que devuelva el número mayor de un array.
+    const numeroMayor = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo5").innerHTML = myArrayMax(numeroMayor);
+    
+    function myArrayMax(arr) {
+      return Math.max.apply(null, arr);
+    }
+
+    //Crear una función que devuelva el número mayor de un array.
+    const numeroMenor  = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo6").innerHTML = myArrayMin(numeroMenor);
+
+    function myArrayMin(arr) {
+      return Math.min.apply(null, arr);
+    }
+
+    //Convertir en minúsculas todas las letras de un texto:
+    let saludo = '¡HOLA!';
+    console.log(saludo.toLowerCase())
+
+     //Convertir en mayusculas todas las letras de un texto:
+     let otrosaludo = '¡hola!';
+
+     console.log(otrosaludo.toUpperCase())
+
+     
+     //Convertir en mayusculas la primera letras de un texto:
+
+     let saludito = 'hola';
+     let primeraLetra = saludito[0].toUpperCase();
+
+      console.log(primeraLetra);
+      let restoDelSaludo = saludito.slice(1);
+
+      console.log(restoDelSaludo)
+      let nuevoSaludo = primeraLetra + restoDelSaludo;
+
+      console.log(nuevoSaludo);
+
 
     
 
